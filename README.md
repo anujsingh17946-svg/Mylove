@@ -2,6 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Happy New Year Love 💗</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffe6f0;
+        color: #c4006a;
+        text-align: center;
+        padding-top: 100px;
+        overflow: hidden;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #loveCounter {
+        font-size: 50px;
+        margin-top: 50px;
+        color: #ff1493;
+    }
+    .sparkle {
+        position: fixed;
+        font-size: 20px;
+        color: gold;
+        animation: sparkleAnim 1.5s infinite;
+    }
+    @keyframes sparkleAnim {
+        0% {transform: translateY(0) scale(1);}
+        50% {transform: translateY(-20px) scale(1.5);}
+        100% {transform: translateY(0) scale(1);}
+    }
+</style>
+</head>
+<body>
+
+<h1>🎉 Happy New Year Muskan! 🎉</h1>
+<p>Calculating how much I love you...</p>
+<div id="loveCounter">0</div>
+
+<div id="sparkles"></div>
+
+<script>
+// Love counter logic
+let counter = 0;
+let loveDisplay = document.getElementById('loveCounter');
+
+function updateCounter() {
+    counter += Math.floor(Math.random()*1000000);
+    if(counter > 9999999999999){
+        loveDisplay.innerHTML = '∞ 💗';
+        clearInterval(counterInterval);
+    } else {
+        loveDisplay.innerHTML = counter.toLocaleString();
+    }
+}
+
+let counterInterval = setInterval(updateCounter, 50);
+
+// Sparkle animation
+const sparklesContainer = document.getElementById('sparkles');
+function createSparkle() {
+    const s = document.createElement('div');
+    s.className='sparkle';
+    s.style.left = Math.random()*window.innerWidth+'px';
+    s.style.top = Math.random()*window.innerHeight+'px';
+    s.innerHTML = '✨';
+    sparklesContainer.appendChild(s);
+    setTimeout(()=>sparklesContainer.removeChild(s),1500);
+}
+setInterval(createSparkle,200);
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <title>Aaj ka Din</title>
 <style>
 body {font-family: Arial,sans-serif; background:#ffe6f0; color:#4a004a; padding:40px; text-align:left; overflow-x:hidden;}
