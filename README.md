@@ -2,248 +2,141 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Our Special Moments</title>
+<title>Aaj ka Din</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #fff0f5;
-        color: #4a004a;
-        padding: 40px;
-        text-align: center;
-        overflow-x: hidden;
-        transition: background 0.5s;
-    }
-
-    button {
-        background-color: #c4006a;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        margin: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 16px;
-    }
-
-    button:hover {
-        background-color: #a00055;
-    }
-
-    section {
-        display: none;
-        animation: fadeIn 0.5s;
-        position: relative;
-        z-index: 1;
-    }
-
-    section.active {
-        display: block;
-    }
-
-    @keyframes fadeIn {
-        from {opacity:0;}
-        to {opacity:1;}
-    }
-
-    /* Dramatic "No" effect */
-    .shake {
-        animation: shake 0.5s;
-    }
-    @keyframes shake {
-        0% { transform: translate(5px,0); }
-        25% { transform: translate(-5px,0); }
-        50% { transform: translate(5px,0); }
-        75% { transform: translate(-5px,0); }
-        100% { transform: translate(0,0); }
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    /* Rose falling animation */
-    .rose {
-        position: fixed;
-        top: -50px;
-        font-size: 24px;
-        color: red;
-        z-index: 0;
-        pointer-events: none;
-        animation-name: fall;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes fall {
-        0% {transform: translateY(-50px) rotate(0deg);}
-        100% {transform: translateY(100vh) rotate(360deg);}
-    }
-
-    /* Sparkle animation for final page */
-    .sparkle {
-        position: fixed;
-        font-size: 20px;
-        color: #ff1493;
-        z-index: 2;
-        pointer-events: none;
-        animation-name: sparkleAnim;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-    }
-    @keyframes sparkleAnim {
-        0% {transform: translateY(0) scale(1);}
-        50% {transform: translateY(-20px) scale(1.5);}
-        100% {transform: translateY(0) scale(1);}
-    }
-
+body {font-family: Arial,sans-serif; background:#ffe6f0; color:#4a004a; padding:40px; text-align:left; overflow-x:hidden;}
+a{color:#c4006a; text-decoration:none; font-weight:bold;}
+.rose{position:fixed; top:-50px; font-size:24px; color:red; z-index:0; pointer-events:none; animation-name:fall; animation-timing-function:linear; animation-iteration-count:infinite;}
+@keyframes fall{0% {transform:translateY(-50px) rotate(0deg);} 100% {transform:translateY(100vh) rotate(360deg);}}
 </style>
 </head>
 <body>
 
-<h1>🫂 Our Special Moments 🫂</h1>
+<h1>💗 Aaj ka Din 💗</h1>
 
-<!-- Background Music -->
+<p>
+Mere liye aaj ka din bohot accha tha..subah ki starting waise hi hui jaise pehle jab ham relationship me aye the tab hua karti thi...🫂💗  
+Or aajka din bohot pyara tha idk tumhare liye kaisa tha but mere liye bohot pyara tha wo alag baat hai aaj me thoda busy tha or thoda tum to utni baat nahi hui but subah bohot acche se baat hui wo bohot pyari cheez thi or ykw mussu 🫂🫂💗
+</p>
+
+<p>
+<a href="rose.html">➡ Next: My First Rose & Chocolate</a>
+</p>
+
+<div id="roses"></div>
+<script>
+const rosesContainer=document.getElementById('roses');
+function createRose(){const r=document.createElement('div');r.className='rose';r.style.left=Math.random()*window.innerWidth+'px';r.style.animationDuration=(3+Math.random()*5)+'s';r.innerHTML='🌹';rosesContainer.appendChild(r);setTimeout(()=>rosesContainer.removeChild(r),8000);}
+setInterval(createRose,500);
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My First Rose</title>
+<style>
+body{font-family:Arial,sans-serif; background:#fff0f5; color:#4a004a; padding:40px; text-align:left; overflow-x:hidden;}
+a{color:#c4006a; text-decoration:none; font-weight:bold;}
+.rose{position:fixed; top:-50px; font-size:24px; color:red; z-index:0; pointer-events:none; animation-name:fall; animation-timing-function:linear; animation-iteration-count:infinite;}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(100vh) rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<h1>🌹 My First Rose 🌹</h1>
+
+<p>
+aaj tum mere liye rose leke ayi..mujhe pehli bar kisi ne rose diya (isse pehle family cousin sister friend kisi ne nahi diya) 🫂💗 ye meri life ka first rose tha or mujhe nahi pata tha mai kaise react karu to me bas blush kare ja raha tha mujhe kuch nahi bolna tha me bas khush hona cahta tha 🫂🫂💗  
+pata hai tum pure time padh rahi thi or agar piche mudke dekhti to wo pure 1 ghante me bas hase ja raha tha that rose was just very important for me 💗💗
+</p>
+
+<p>
+Wo chocolate ke liye bhi bohot bohot thank you me usko kisi ke sath share nahi karne wala me wo akela khaunga maine socha tha tumhare sath share karunga but tumhara fast tha or tumhara apne hatho se kuch mere liye bana ke lana mere liye bohot special hai mussu...
+</p>
+
+<p>
+<a href="promise.html">➡ Next: Promise & Future</a>
+</p>
+
+<div id="roses"></div>
+<script>
+const rosesContainer=document.getElementById('roses');
+function createRose(){const r=document.createElement('div');r.className='rose';r.style.left=Math.random()*window.innerWidth+'px';r.style.animationDuration=(3+Math.random()*5)+'s';r.innerHTML='🌹';rosesContainer.appendChild(r);setTimeout(()=>rosesContainer.removeChild(r),8000);}
+setInterval(createRose,500);
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Promise & Love</title>
+<style>
+body{font-family:Arial,sans-serif; background:#ffeaf4; color:#4a004a; padding:40px; text-align:left; overflow-x:hidden;}
+a{color:#c4006a; text-decoration:none; font-weight:bold;}
+.rose{position:fixed; top:-50px; font-size:24px; color:red; z-index:0; pointer-events:none; animation-name:fall; animation-timing-function:linear; animation-iteration-count:infinite;}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(100vh) rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<h1>🫂 My Promise to You 🫂</h1>
+
+<p>
+tumhe me dil se pyar karta hu mussu..and i promise I am not gonna leave you for rest of my life...🫂🫂💗 me hamesha rahunga baccha...🫂💗 jab tak tum rakhogi tab tak rahunga i love you muskan 🫂🫂💗
+</p>
+
+<p>
+tumhare ane ke baad aisa feel hone laga me bhi apne life ka main character hu otherwise hamesha bas sabke bare me sochta rehta tha tumhare ane ke baad pata chala ki me bhi special hu or deserve karta hu kisi ka pyar..🫂🫂💗 tumne mujhe jitna pyar diya itna mujhe kabhi kisi se nahi mila...✨🫂💗 thank you for everything baccha..2025 mere ek bohot pyara saal tha...
+</p>
+
+<p>
+<a href="thankyou.html">➡ Next: Final Thank You</a>
+</p>
+
+<div id="roses"></div>
+<script>
+const rosesContainer=document.getElementById('roses');
+function createRose(){const r=document.createElement('div');r.className='rose';r.style.left=Math.random()*window.innerWidth+'px';r.style.animationDuration=(3+Math.random()*5)+'s';r.innerHTML='🌹';rosesContainer.appendChild(r);setTimeout(()=>rosesContainer.removeChild(r),8000);}
+setInterval(createRose,500);
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You Muskan</title>
+<style>
+body{font-family:Arial,sans-serif; background:#ffe6f0; color:#4a004a; padding:40px; text-align:center; overflow:hidden;}
+.rose{position:fixed; top:-50px; font-size:24px; color:red; z-index:0; pointer-events:none; animation-name:fall; animation-timing-function:linear; animation-iteration-count:infinite;}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(100vh) rotate(360deg);}}
+.sparkle{position:fixed; font-size:20px; color:#ff1493; z-index:2; pointer-events:none; animation-name:sparkleAnim; animation-duration:1.5s; animation-iteration-count:infinite;}
+@keyframes sparkleAnim{0%{transform:translateY(0) scale(1);}50%{transform:translateY(-20px) scale(1.5);}100%{transform:translateY(0) scale(1);}}
+</style>
+</head>
+<body>
+
+<h1>🫂💗 Thank you Muskan for choosing me 💗🫂</h1>
+<p>🌟✨🌹✨🌟</p>
+
 <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mpeg">
+  <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Rose falling elements -->
 <div id="roses"></div>
-
-<!-- Sparkle container -->
 <div id="sparkles"></div>
 
-<!-- First slide: Do you love me -->
-<section id="loveCheck" class="active">
-    <h2>💖 Do you love me? 💖</h2>
-    <button onclick="chooseLove('yes')">Yes</button>
-    <button onclick="chooseLove('no')">No</button>
-    <p id="dramaticText" class="hidden">😢 Oh no! How could you not? 😢</p>
-</section>
-
-<!-- Main content -->
-<section id="day">
-    <h2>💗 Aaj ka Din 💗</h2>
-    <p>
-        Mere liye aaj ka din bohot accha tha. Subah ki starting bilkul waise hi hui
-        jaise pehle jab hum relationship me aaye the.  
-        Aaj ka din bohot pyara tha, chahe hum zyada baat nahi kar paaye,
-        lekin subah ki baatein dil se bohot special thi 🫂
-    </p>
-    <p>
-        Main thoda busy tha, tum bhi padh rahi thi,  
-        lekin phir bhi wo connection, wo feeling… sab perfect tha 💗
-    </p>
-</section>
-
-<section id="rose">
-    <h2>🌹 My First Rose 🌹</h2>
-    <p>
-        Aaj tum mere liye rose leke aayi.  
-        Ye meri life ka <strong>pehla rose</strong> tha.  
-        Isse pehle kisi ne nahi diya… family, friends, koi bhi nahi.
-    </p>
-    <p>
-        Mujhe nahi pata tha kaise react karun, bas blush hi karta raha 🫂💗  
-        Agar tum piche mudke dekhti, to ek ghante tak bas hasta hi rehta.
-    </p>
-    <p>
-        Wo rose meri zindagi ka bohot important hissa ban gaya.
-        Main use hamesha sambhal ke rakhunga 💗
-    </p>
-    <p>
-        Chocolate ke liye bhi thank you.  
-        Main use kisi ke saath share nahi karunga, sirf apne liye 💗  
-        Tumhare chote chote gestures hi mere liye sab kuch hain.
-    </p>
-</section>
-
-<section id="promise">
-    <h2>🫂 My Promise to You 🫂</h2>
-    <p>
-        Tumhare aane ke baad mujhe laga ki main bhi apni life ka main character hoon 💗  
-        Tumne mujhe wo feeling di jo mujhe kabhi kisi se nahi mili.
-    </p>
-    <p>
-        Main maanta hoon, maine is saal bohot galtiyan ki.
-        Tumhe hurt kiya, pareshan kiya. Iske liye dil se sorry 💔
-    </p>
-    <p>
-        2026 me main apne career pe bhi dhyaan dunga aur hamare relationship pe bhi.
-        Koi sacrifice nahi hoga 🫂
-    </p>
-    <p>
-        Main promise karta hoon ki:
-        <ul>
-            <li>Main tumhe samajhne ki koshish karunga</li>
-            <li>Main tumhara saath kabhi nahi chhodunga</li>
-            <li>Main hamesha tumhara rahunga</li>
-        </ul>
-    </p>
-    <p>
-        I love you Muskan 💗  
-        Agale 1000 saal tak… jab tak Yamraj khud alag na kare 🧿
-    </p>
-</section>
-
-<section id="thankyou">
-    <h2>🫂💗 Thank you Muskan for choosing me 💗🫂</h2>
-    <p>🌟✨🌹✨🌟</p>
-</section>
-
 <script>
-// Generate falling roses
-const rosesContainer = document.getElementById('roses');
-function createRose() {
-    const rose = document.createElement('div');
-    rose.className = 'rose';
-    rose.style.left = Math.random() * window.innerWidth + 'px';
-    rose.style.animationDuration = (3 + Math.random() * 5) + 's';
-    rose.innerHTML = '🌹';
-    rosesContainer.appendChild(rose);
-    setTimeout(() => rosesContainer.removeChild(rose), 8000);
-}
-setInterval(createRose, 500);
+const rosesContainer=document.getElementById('roses');
+function createRose(){const r=document.createElement('div');r.className='rose';r.style.left=Math.random()*window.innerWidth+'px';r.style.animationDuration=(3+Math.random()*5)+'s';r.innerHTML='🌹';rosesContainer.appendChild(r);setTimeout(()=>rosesContainer.removeChild(r),8000);}
+setInterval(createRose,500);
 
-// Sparkle animation for final page
-const sparklesContainer = document.getElementById('sparkles');
-function createSparkle() {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.left = Math.random() * window.innerWidth + 'px';
-    sparkle.style.top = Math.random() * window.innerHeight + 'px';
-    sparkle.innerHTML = '✨';
-    sparklesContainer.appendChild(sparkle);
-    setTimeout(() => sparklesContainer.removeChild(sparkle), 1500);
-}
-
-// Create continuous sparkles on final page
-setInterval(() => {
-    if(document.getElementById('thankyou').classList.contains('active')) {
-        createSparkle();
-    }
-}, 200);
-
-// Love choice logic
-function chooseLove(choice) {
-    if(choice === 'yes') {
-        document.getElementById('loveCheck').classList.remove('active');
-        document.getElementById('day').classList.add('active');
-        document.getElementById('rose').classList.add('active');
-        document.getElementById('promise').classList.add('active');
-        // Show final thank you page after 2 seconds
-        setTimeout(() => {
-            document.getElementById('thankyou').classList.add('active');
-        }, 2000);
-    } else {
-        const loveCheck = document.getElementById('loveCheck');
-        const text = document.getElementById('dramaticText');
-        loveCheck.classList.add('shake');
-        text.classList.remove('hidden');
-        setTimeout(() => loveCheck.classList.remove('shake'), 500);
-    }
-}
+const sparklesContainer=document.getElementById('sparkles');
+function createSparkle(){const s=document.createElement('div');s.className='sparkle';s.style.left=Math.random()*window.innerWidth+'px';s.style.top=Math.random()*window.innerHeight+'px';s.innerHTML='✨';sparklesContainer.appendChild(s);setTimeout(()=>sparklesContainer.removeChild(s),1500);}
+setInterval(createSparkle,200);
 </script>
 
 </body>
